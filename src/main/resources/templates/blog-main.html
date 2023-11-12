@@ -8,11 +8,16 @@
     <meta charset="UTF-8">
     <title th:text="${title}"/>
 </head>
-<body>
-<div th:insert="blocks/header"></div>
+<body class="container-fluid">
+<div th:insert="~{blocks/header}"></div>
+<h3 class="container mt-5">Блог</h3>
 
-<p class="container mt-4">Блог</p>
+<div th:each="el : ${posts}" class="alert alert-info mt-3">
+    <h3 th:text="${el.title}"></h3>
+    <p th:text="${el.anons}"></p>
+    <a th:href="'/blog/' + ${el.id}">детальнее</a>
+</div>
 
-<div th:insert="blocks/footer"></div>
+<div th:insert="~{blocks/footer}"></div>
 </body>
 </html>

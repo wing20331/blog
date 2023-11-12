@@ -8,11 +8,11 @@
     <meta charset="UTF-8">
     <title th:text="${title}"/>
 </head>
-<body>
-<div th:insert="blocks/header"></div>
+<body class="container-fluid">
+<div th:insert="~{blocks/header}"></div>
 
+<h3>Главная</h3>
 
-
-<div th:insert="blocks/footer"></div>
+<div th:insert="~{blocks/footer}"></div>
 </body>
 </html>

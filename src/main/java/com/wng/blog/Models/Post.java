@@ -18,6 +18,11 @@ public class Post {
     private String title, anons,fullText;
     private int views;
 
+    public Post(String title, String anons, String fullText) {
+        this.title = title;
+        this.anons = anons;
+        this.fullText = fullText;
+    }
 }
 
 
